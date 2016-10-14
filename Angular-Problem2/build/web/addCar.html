@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Add Car</h2>
+    <table class="table">
+        <tr>
+            <th>
+                Year
+            </th>
+            <th>
+                Registered
+            </th>
+            <th>
+                Make
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+        <tr>
+            <td><input ng-model="newcar.year" type="number" placeholder="Year"></td>
+            <td><input ng-model="newcar.registered" type="date" placeholder="Registered"></td>
+            <td><input ng-model="newcar.make" type="text" placeholder="make"></td>
+            <td><input ng-model="newcar.model" type="text" placeholder="Model"></td>
+            <td><input ng-model="newcar.description" type="text" placeholder="Description"></td>
+            <td><input ng-model="newcar.price" type="number" placeholder="Price"></td>
+        </tr>
+    </table>
+    <button ng-click="manageCtrl.addCar(newcar)">Add Car</button>
+</div>

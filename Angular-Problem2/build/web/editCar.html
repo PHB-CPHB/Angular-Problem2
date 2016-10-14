@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Add Car</h2>
+    <table class="table">
+        <tr>
+            <th>
+                Year
+            </th>
+            <th>
+                Registered
+            </th>
+            <th>
+                Make
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+        <tr ng-repeat="car in manageCtrl.cars | filter: {id : manageCtrl.car.id}">
+            <td><input ng-model="newcar.year" type="number" value="{{car.year}}"></td>
+            <td><input ng-model="newcar.registered" type="date" value="{{car.registered | date: 'dd/MM/yyyy'}}"></td>
+            <td><input ng-model="newcar.make" type="text" value="{{car.make}}"></td>
+            <td><input ng-model="newcar.model" type="text" value="{{car.model}}"></td>
+            <td><input ng-model="newcar.description" type="text" value="{{car.description}}"></td>
+            <td><input ng-model="newcar.price" type="number" value="{{car.price}}"></td>
+        </tr>
+    </table>
+    <button ng-click="manageCtrl.addCar(newcar)">Add Car</button>
+</div>
